@@ -27,3 +27,6 @@ local.properties
 .idea
 build
 import-summary.txt
+
+# Secret API keys
+app/src/main/res/values/keys.xml

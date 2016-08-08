@@ -43,9 +43,15 @@
         
         <uses-library android:required="true" android:name="com.google.android.maps" />
 
+        <!--
+             Create a string resource 'secret_maps_api_key' with the Google Maps API key
+             in strings.xml, or better yet, in a new file keys.xml which git ignores
+             (see .gitignore in the top-level directory).  You do NOT want to check
+             private API keys into your group project's public code repository.
+        -->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="YOUR-API-KEY-HERE" />
+            android:value="@string/secret_maps_api_key" />
 
         <meta-data
             android:name="com.google.android.gms.version"
