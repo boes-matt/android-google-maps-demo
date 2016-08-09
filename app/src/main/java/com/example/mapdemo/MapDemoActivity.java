@@ -1,5 +1,6 @@
 package com.example.mapdemo;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
