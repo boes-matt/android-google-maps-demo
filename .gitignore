@@ -10,4 +10,5 @@ local.properties
 build
 
 # Secret API keys
-app/src/main/res/values/keys.xml
+app/src/debug/res/values/keys.xml
+app/src/release/res/values/keys.xml
