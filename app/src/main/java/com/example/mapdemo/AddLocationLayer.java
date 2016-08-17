@@ -12,7 +12,7 @@ public class AddLocationLayer implements
     // TODO Add location layer
     @SuppressWarnings("MissingPermission")
     private void addLayer(GoogleMap map) {
-
+        map.setMyLocationEnabled(true);
     }
 
     private void check() {
