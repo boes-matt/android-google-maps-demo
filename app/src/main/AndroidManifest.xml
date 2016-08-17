@@ -11,28 +11,30 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MapDemoActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <!--
              Create a string resource 'secret_maps_api_key' with the Google Maps API debug
              key in strings.xml, or better yet, in a new file src/debug/res/values/keys.xml
              which git will ignore (see .gitignore in top-level directory).  You do NOT
              want to check private API keys into your group project's public code repository.
+             To create a key, go to https://developers.google.com/maps/documentation/android/start#get-key
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/secret_maps_api_key" />
+
+        <activity
+            android:name=".MapsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 
