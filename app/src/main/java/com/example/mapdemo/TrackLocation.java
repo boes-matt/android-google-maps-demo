@@ -33,12 +33,26 @@ public class TrackLocation implements
         mListeners = listeners;
     }
 
-    @Override
-    public void onLocationChanged(Location location) {
-        for (Listener listener : mListeners) {
-            LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-            listener.accept(mGoogleMap, latLng);
-        }
+    // TODO Request location updates
+    // Use LocationServices' FusedLocationApi.
+    // Pass mClient, mLocationRequest, and this TrackLocation.
+    // TrackLocation implements LocationListener.
+    // Look at preconditions in check method.
+    @SuppressWarnings("MissingPermission")
+    private void startLocationUpdates() {
+        LocationServices.FusedLocationApi
+                .requestLocationUpdates(mClient, mLocationRequest, this);
+        Log.d(MapsActivity.TAG, "Requested location updates");
+    }
+
+    // TODO Remove location updates
+    // Use LocationServices' FusedLocationApi.
+    // Pass mClient and this TrackLocation
+    // Look at preconditions in check method.
+    private void stopLocationUpdates() {
+        LocationServices.FusedLocationApi
+                .removeLocationUpdates(mClient, this);
+        Log.d(MapsActivity.TAG, "Removed location updates");
     }
 
     private void check() {
@@ -64,17 +78,12 @@ public class TrackLocation implements
         }
     }
 
-    @SuppressWarnings("MissingPermission")
-    private void startLocationUpdates() {
-        LocationServices.FusedLocationApi
-                .requestLocationUpdates(mClient, mLocationRequest, this);
-        Log.d(MapsActivity.TAG, "Requested location updates");
-    }
-
-    private void stopLocationUpdates() {
-        LocationServices.FusedLocationApi
-                .removeLocationUpdates(mClient, this);
-        Log.d(MapsActivity.TAG, "Removed location updates");
+    @Override
+    public void onLocationChanged(Location location) {
+        for (Listener listener : mListeners) {
+            LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+            listener.accept(mGoogleMap, latLng);
+        }
     }
 
     @Override

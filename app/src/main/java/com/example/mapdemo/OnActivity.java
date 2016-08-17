@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
 
+// TODO Understand how OnActivity works
+// OnActivity is a headless fragment.
 public class OnActivity extends Fragment {
 
     private Listener[] mListeners;

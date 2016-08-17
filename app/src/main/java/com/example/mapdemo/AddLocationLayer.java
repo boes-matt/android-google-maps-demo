@@ -9,15 +9,16 @@ public class AddLocationLayer implements
     private GoogleMap mGoogleMap;
     private OnPermission.Result mPermissionResult;
 
+    // TODO Add location layer
     @SuppressWarnings("MissingPermission")
-    private void addLayer() {
-        mGoogleMap.setMyLocationEnabled(true);
+    private void addLayer(GoogleMap map) {
+        map.setMyLocationEnabled(true);
     }
 
     private void check() {
         if (mGoogleMap != null &&
                 mPermissionResult == OnPermission.Result.GRANTED) {
-            addLayer();
+            addLayer(mGoogleMap);
         }
     }
 

@@ -9,8 +9,19 @@ import android.widget.Toast;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.maps.android.ui.IconGenerator;
+
+// TODO Test user stories
+// - Do you see a map?  Did you add a Google Maps API key?
+// - Is the location layer enabled?  Can you center the map at your location?
+// - Can you add a custom marker to the map?  Does the marker animate?
+// - Can the user input a title for the marker?
+// - Do you see location updates in the log?  Filter log with TAG 'MapsActivity'.
+// - Does the map center at your location on app open?
+// - Do you see 3d buildings on your map?  Try tilting and zooming in.
+// - When you rotate your phone, does it NOT crash?
 
 public class MapsActivity extends AppCompatActivity {
 
@@ -38,13 +49,11 @@ public class MapsActivity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         SupportMapFragment fragment = (SupportMapFragment) fm.findFragmentById(R.id.map);
         if (fragment != null) {
-            fragment.getMapAsync(new OnMap(manager, click, layer, move, track));
+            getMapAsync(fragment, new OnMap(manager, click, layer, move, track));
         }
 
-        GoogleApiClient client = new GoogleApiClient.Builder(this)
-                .enableAutoManage(this, null)
-                .addApi(LocationServices.API).build();
-        client.registerConnectionCallbacks(new OnClient(client, move, track));
+        GoogleApiClient client = getGoogleApiClient();
+        addConnectionCallbacks(client, new OnClient(client, move, track));
 
         int requestCode = 1001;
         String permission = Manifest.permission.ACCESS_FINE_LOCATION;
@@ -53,6 +62,10 @@ public class MapsActivity extends AppCompatActivity {
         onPermission.beginRequest(location);
     }
 
+    // TODO Build IconGenerator
+    // Set IconGenerator attributes.
+    // Use the MarkerFont text appearance style.
+    // Use it to build custom markers.
     private IconGenerator getIconGenerator() {
         IconGenerator generator = new IconGenerator(this);
         generator.setStyle(IconGenerator.STYLE_GREEN);
@@ -60,12 +73,33 @@ public class MapsActivity extends AppCompatActivity {
         return generator;
     }
 
+    // TODO Build LocationRequest
+    // Set priority, interval, and fastest interval.
+    // Use it to start location updates.
     private LocationRequest getLocationRequest() {
         LocationRequest request = new LocationRequest();
         request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         request.setInterval(10000);        // 10 seconds
         request.setFastestInterval(5000);  // 5 seconds
         return request;
+    }
+
+    // TODO Build GoogleApiClient
+    // Enable auto manage and add LocationServices API
+    private GoogleApiClient getGoogleApiClient() {
+        return new GoogleApiClient.Builder(this)
+                .enableAutoManage(this, null)
+                .addApi(LocationServices.API).build();
+    }
+
+    // TODO Get the map asynchronously
+    private void getMapAsync(SupportMapFragment fragment, OnMapReadyCallback callback) {
+        fragment.getMapAsync(callback);
+    }
+
+    // TODO Add callbacks to the GoogleApiClient
+    private void addConnectionCallbacks(GoogleApiClient client, GoogleApiClient.ConnectionCallbacks callbacks) {
+        client.registerConnectionCallbacks(callbacks);
     }
 
 }

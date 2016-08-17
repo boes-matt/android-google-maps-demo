@@ -26,26 +26,38 @@ public class MoveToLocationFirstTime implements
         mSavedInstanceState = savedInstanceState;
     }
 
+    // TODO Move map to current location
+    // Use LocationServices' FusedLocationApi.
+    // Get last location.
+    // Move map with camera.
+    // Use getCameraPosition helper method.
     @SuppressWarnings("MissingPermission")
-    private void check() {
-        if (mSavedInstanceState == null &&
-                mClient != null && mClient.isConnected() &&
-                mGoogleMap != null &&
-                mPermissionResult == OnPermission.Result.GRANTED) {
-            Location location = LocationServices.FusedLocationApi.getLastLocation(mClient);
-            if (location != null) {
-                LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-                mGoogleMap.moveCamera(CameraUpdateFactory.newCameraPosition(getCameraPosition(latLng)));
-            }
+    private void moveToUserLocation(GoogleApiClient client, GoogleMap map) {
+        Location location = LocationServices.FusedLocationApi.getLastLocation(client);
+        if (location != null) {
+            LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+            map.moveCamera(CameraUpdateFactory.newCameraPosition(getCameraPosition(latLng)));
         }
     }
 
+    // TODO Build CameraPosition
+    // Use CameraPosition.Builder.
+    // Set target, zoom, and tilt (for 3d effect).
     private CameraPosition getCameraPosition(LatLng latLng) {
         return new CameraPosition.Builder()
                 .target(latLng)
                 .zoom(18)
                 .tilt(90)
                 .build();
+    }
+
+    private void check() {
+        if (mSavedInstanceState == null &&
+                mClient != null && mClient.isConnected() &&
+                mGoogleMap != null &&
+                mPermissionResult == OnPermission.Result.GRANTED) {
+            moveToUserLocation(mClient, mGoogleMap);
+        }
     }
 
     @Override

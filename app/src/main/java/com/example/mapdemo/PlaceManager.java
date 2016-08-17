@@ -9,6 +9,8 @@ import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 
+// TODO Understand how PlaceManager works
+// PlaceManager saves marker state on device rotation.
 public class PlaceManager implements
         OnActivity.Listener,
         OnMap.Listener {

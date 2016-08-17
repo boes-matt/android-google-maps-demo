@@ -18,6 +18,8 @@ public class AddMarkerOnLongClick implements OnMap.Listener {
         mPlaceManager = manager;
     }
 
+    // TODO Set long click listener
+    // Call showAlertDialog method.
     @Override
     public void onMap(final GoogleMap map) {
         map.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
@@ -28,6 +30,12 @@ public class AddMarkerOnLongClick implements OnMap.Listener {
         });
     }
 
+    // TODO Show dialog
+    // Use AlertDialog.Builder and marker_dialog layout.
+    // Set a positive button and a negative button.
+    // Positive button should get the title field and add a place to the PlaceManager.
+    // Negative button is a no-op.
+    // Show the dialog.
     private void showAlertDialog(final GoogleMap map, final LatLng latLng) {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setTitle("Add marker");
@@ -38,13 +46,10 @@ public class AddMarkerOnLongClick implements OnMap.Listener {
         dialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                String title = "Wow!";
-
                 final EditText titleField = (EditText) dialog.findViewById(R.id.title);
-                if (titleField != null) {
-                    title = titleField.getText().toString();
-                }
-
+                String title = titleField != null ?
+                        titleField.getText().toString() :
+                        "Wow!";
                 mPlaceManager.addPlace(map, title, latLng);
             }
         });
