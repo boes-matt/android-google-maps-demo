@@ -1,12 +1,9 @@
 package com.example.mapdemo;
 
-import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
@@ -33,22 +30,14 @@ public class MoveToLocationFirstTime implements
     // Use getCameraPosition helper method.
     @SuppressWarnings("MissingPermission")
     private void moveToUserLocation(GoogleApiClient client, GoogleMap map) {
-        Location location = LocationServices.FusedLocationApi.getLastLocation(client);
-        if (location != null) {
-            LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-            map.moveCamera(CameraUpdateFactory.newCameraPosition(getCameraPosition(latLng)));
-        }
+
     }
 
     // TODO Build CameraPosition
     // Use CameraPosition.Builder.
     // Set target, zoom, and tilt (for 3d effect).
     private CameraPosition getCameraPosition(LatLng latLng) {
-        return new CameraPosition.Builder()
-                .target(latLng)
-                .zoom(18)
-                .tilt(90)
-                .build();
+        return new CameraPosition.Builder().build();
     }
 
     private void check() {

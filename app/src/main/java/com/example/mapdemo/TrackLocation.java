@@ -8,7 +8,6 @@ import android.util.Log;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 
@@ -40,8 +39,6 @@ public class TrackLocation implements
     // Look at preconditions in check method.
     @SuppressWarnings("MissingPermission")
     private void startLocationUpdates() {
-        LocationServices.FusedLocationApi
-                .requestLocationUpdates(mClient, mLocationRequest, this);
         Log.d(MapsActivity.TAG, "Requested location updates");
     }
 
@@ -50,8 +47,6 @@ public class TrackLocation implements
     // Pass mClient and this TrackLocation
     // Look at preconditions in check method.
     private void stopLocationUpdates() {
-        LocationServices.FusedLocationApi
-                .removeLocationUpdates(mClient, this);
         Log.d(MapsActivity.TAG, "Removed location updates");
     }
 
