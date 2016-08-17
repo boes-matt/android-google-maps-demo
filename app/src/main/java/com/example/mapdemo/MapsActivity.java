@@ -22,6 +22,9 @@ import com.google.maps.android.ui.IconGenerator;
 // - Do you see 3d buildings on your map?  Try tilting and zooming in.
 // - When you rotate your phone, does it NOT crash?
 
+// Presentation slides:
+// https://docs.google.com/presentation/d/1MEs_JAyRC3J0YOX0bce1XBG42w5Q6rAvMvHb46yEbpo/edit?usp=sharing
+
 public class MapsActivity extends AppCompatActivity {
 
     public static final String TAG = MapsActivity.class.getSimpleName();
