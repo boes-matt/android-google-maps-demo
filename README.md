@@ -44,22 +44,13 @@
 * A4 Check out the project's library dependencies (app/build.gradle)
 * A5 Read what onCreate does (MapsActivity)  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* B1 Build GoogleApiClient (MapsActivity)
+* B2 Get the map asynchronously (MapsActivity)
+* B3 Register callbacks on the GoogleApiClient (MapsActivity)  
 
-
-
-
-
-* B1 Build GoogleApiClient (MapsActivity)&nbsp;
-* B2 Get the map asynchronously (MapsActivity)&nbsp;
-* B3 Register callbacks on the GoogleApiClient (MapsActivity)&nbsp;
-&nbsp;
-
-
-C1 Enable location layer (action.AddLocationLayer)&nbsp;&nbsp;
-C2 Move map to current location (action.MoveToLocationFirstTime)&nbsp;&nbsp;
-C3 Build CameraPosition (action.MoveToLocationFirstTime)&nbsp;&nbsp;
-&nbsp;
+* C1 Enable location layer (action.AddLocationLayer)
+* C2 Move map to current location (action.MoveToLocationFirstTime)
+* C3 Build CameraPosition (action.MoveToLocationFirstTime)  
 
 D1 Set long click listener (action.AddMarkerOnLongClick)&nbsp;&nbsp;
 D2 Show dialog (action.AddMarkerOnLongClick)&nbsp;&nbsp;
