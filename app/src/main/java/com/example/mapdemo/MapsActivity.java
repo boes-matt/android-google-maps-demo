@@ -24,14 +24,33 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.maps.android.ui.IconGenerator;
 
 // TODO A1 Read instructions
+// You will create an app that displays the user's location on the map,
+// allows the user to add markers to the map, and receives regular updates
+// on the user's location.  The task is to read and complete each of the
+// TODOs starting with this one.
 //
-// Presentation slides:
+// PRESENTATION SLIDES:
 // https://docs.google.com/presentation/d/1MEs_JAyRC3J0YOX0bce1XBG42w5Q6rAvMvHb46yEbpo/edit?usp=sharing
 //
-// Summary of TODOs:
+// HELPFUL LINKS:
+// Setup troubleshooting: http://guides.codepath.com/android/Google-Maps-Fragment-Guide#troubleshooting
+// Completed lab: https://github.com/boes-matt/android-google-maps-demo/tree/completed
+// Maps guide: http://guides.codepath.com/android/Google-Maps-API-v2-Usage
+//
+// RUNNING THE APP:
+// My advice is to use an actual device or the official Android emulator:
+// http://guides.codepath.com/android/Google-Maps-Fragment-Guide#setup-x86-based-emulator
+//
+// But if using the Genymotion emulator, setup Google Play Services and GPS:
+// http://guides.codepath.com/android/Genymotion-2.0-Emulators-with-Google-Play-support#setup-google-play-services
+//
+// SUMMARY OF TODOs:
+// I suggest you compile and run the project after completing each section.
+//
 // A1 Read instructions (MapsActivity)
 // A2 Prepare Android Studio (MapsActivity)
 // A3 Get Google Maps API key (AndroidManifest)
+// A4 Check out the project's library dependencies (app/build.gradle)
 //
 // B1 Build GoogleApiClient (MapsActivity)
 // B2 Get the map asynchronously (MapsActivity)
@@ -63,8 +82,8 @@ import com.google.maps.android.ui.IconGenerator;
 // If Studio complains about major minor version, downgrade gradle in your top-level build.gradle
 // and gradle-wrapper.properties.  See files for instructions.
 //
-// If Studio complains about build tools, go to the SDK manager (icon in toolbar) -> SDK Tools tab
-// -> Select Android SDK Build-Tools -> Ok.
+// If Studio complains about build tools or support repository, go to the SDK manager (icon in toolbar)
+// -> SDK Tools tab -> Select Android SDK Build-Tools or Support Repository -> Ok.
 
 
 // TODO F1 Test user stories
