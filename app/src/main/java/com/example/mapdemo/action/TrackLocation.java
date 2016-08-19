@@ -1,10 +1,15 @@
-package com.example.mapdemo;
+package com.example.mapdemo.action;
 
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.example.mapdemo.MapsActivity;
+import com.example.mapdemo.helper.OnActivity;
+import com.example.mapdemo.helper.OnClient;
+import com.example.mapdemo.helper.OnMap;
+import com.example.mapdemo.helper.OnPermission;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
@@ -33,11 +38,14 @@ public class TrackLocation implements
         mListeners = listeners;
     }
 
-    // TODO Request location updates
+    // TODO E2 Request location updates
     // Use LocationServices' FusedLocationApi.
     // Pass mClient, mLocationRequest, and this TrackLocation.
     // TrackLocation implements LocationListener.
     // Look at preconditions in check method.
+    //
+    // If you see an error, try changing the annotation to @SuppressWarnings("All").
+    // We have already checked that the location permission is granted.
     @SuppressWarnings("MissingPermission")
     private void startLocationUpdates() {
         LocationServices.FusedLocationApi
@@ -45,7 +53,7 @@ public class TrackLocation implements
         Log.d(MapsActivity.TAG, "Requested location updates");
     }
 
-    // TODO Remove location updates
+    // TODO E3 Remove location updates
     // Use LocationServices' FusedLocationApi.
     // Pass mClient and this TrackLocation
     // Look at preconditions in check method.

@@ -1,4 +1,4 @@
-package com.example.mapdemo;
+package com.example.mapdemo.action;
 
 import android.animation.ValueAnimator;
 import android.graphics.Bitmap;
@@ -22,8 +22,8 @@ public class AddToMap {
         mIconGenerator = generator;
     }
 
-    // TODO Add marker
-    // Use IconGenerator, MarkerOptions, and GoogleMap.
+    // TODO D4 Add marker
+    // Use IconGenerator, MarkerOptions, BitmapDescriptorFactory, and GoogleMap.
     // Call animate method if animate flag is true.
     public void addTo(GoogleMap map, String title, LatLng latLng, boolean animate) {
         Bitmap bitmap = mIconGenerator.makeIcon(title);
@@ -36,14 +36,15 @@ public class AddToMap {
         }
     }
 
-    // TODO Animate marker
+    // TODO D5 Animate marker
     // Get the marker's position and the map's projection.
     // Create start and stop LatLng's to animate with.
     // Create a ValueAnimator and add an update listener.
-    // Use SphericalUtil to calculate interpolated LatLng.
-    // Set the marker's position to this LatLng.
-    // Set the animator's interpolator and duration.
-    // Start animator.
+    // In the update listener, use SphericalUtil to calculate interpolated
+    // LatLng and set the marker's position to this LatLng.
+    // Set the animator's interpolator to any subclass of TimeInterpolator.
+    // Set the animator's duration.
+    // Start the animator.
     private void animate(GoogleMap map, final Marker marker) {
         final LatLng target = marker.getPosition();
         Projection projection = map.getProjection();

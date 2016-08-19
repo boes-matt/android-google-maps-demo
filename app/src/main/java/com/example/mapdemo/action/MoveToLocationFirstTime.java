@@ -1,9 +1,12 @@
-package com.example.mapdemo;
+package com.example.mapdemo.action;
 
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.example.mapdemo.helper.OnClient;
+import com.example.mapdemo.helper.OnMap;
+import com.example.mapdemo.helper.OnPermission;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -26,11 +29,14 @@ public class MoveToLocationFirstTime implements
         mSavedInstanceState = savedInstanceState;
     }
 
-    // TODO Move map to current location
+    // TODO C2 Move map to current location
     // Use LocationServices' FusedLocationApi.
     // Get last location.
     // Move map with camera.
-    // Use getCameraPosition helper method.
+    // Use LatLng, CameraUpdateFactory, and getCameraPosition helper method.
+    //
+    // If you see an error, try changing the annotation to @SuppressWarnings("All").
+    // We have already checked that the location permission is granted.
     @SuppressWarnings("MissingPermission")
     private void moveToUserLocation(GoogleApiClient client, GoogleMap map) {
         Location location = LocationServices.FusedLocationApi.getLastLocation(client);
@@ -40,9 +46,10 @@ public class MoveToLocationFirstTime implements
         }
     }
 
-    // TODO Build CameraPosition
+    // TODO C3 Build CameraPosition
     // Use CameraPosition.Builder.
-    // Set target, zoom, and tilt (for 3d effect).
+    // Set target, zoom, and tilt
+    // Play around with zoom and tilt values for 3d effect.
     private CameraPosition getCameraPosition(LatLng latLng) {
         return new CameraPosition.Builder()
                 .target(latLng)

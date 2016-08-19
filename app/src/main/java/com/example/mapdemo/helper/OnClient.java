@@ -1,9 +1,10 @@
-package com.example.mapdemo;
+package com.example.mapdemo.helper;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.example.mapdemo.MapsActivity;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class OnClient implements GoogleApiClient.ConnectionCallbacks {

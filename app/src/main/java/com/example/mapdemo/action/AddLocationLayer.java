@@ -1,5 +1,7 @@
-package com.example.mapdemo;
+package com.example.mapdemo.action;
 
+import com.example.mapdemo.helper.OnMap;
+import com.example.mapdemo.helper.OnPermission;
 import com.google.android.gms.maps.GoogleMap;
 
 public class AddLocationLayer implements
@@ -9,7 +11,9 @@ public class AddLocationLayer implements
     private GoogleMap mGoogleMap;
     private OnPermission.Result mPermissionResult;
 
-    // TODO Add location layer
+    // TODO C1 Enable location layer
+    // If you see an error, try changing the annotation to @SuppressWarnings("All").
+    // We have already checked that the location permission is granted.
     @SuppressWarnings("MissingPermission")
     private void addLayer(GoogleMap map) {
         map.setMyLocationEnabled(true);

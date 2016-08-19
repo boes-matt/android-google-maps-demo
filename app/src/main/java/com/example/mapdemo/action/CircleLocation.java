@@ -1,4 +1,4 @@
-package com.example.mapdemo;
+package com.example.mapdemo.action;
 
 import android.graphics.Color;
 

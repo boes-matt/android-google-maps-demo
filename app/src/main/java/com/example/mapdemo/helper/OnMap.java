@@ -1,4 +1,4 @@
-package com.example.mapdemo;
+package com.example.mapdemo.helper;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
