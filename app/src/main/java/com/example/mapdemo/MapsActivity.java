@@ -30,6 +30,15 @@ import com.google.maps.android.ui.IconGenerator;
 // on the user's location.  The task is to read and complete each of the
 // TODOs starting with this one.
 //
+// You will learn about maps, Google Play Services, and location APIs.
+// The lab also offers a design pattern for handling the app's non-sequential
+// execution flow, which is driven by callbacks.  You should think of this
+// approach similar to the way spreadsheets work.  When one cell updates, all
+// the cells that depend on it also update, and so on. See the comments above
+// onCreate in MapsActivity for further explanation specific to this app.  The
+// pattern is partly implemented with headless fragments, which are fragments
+// without a view.
+//
 // PRESENTATION SLIDES:
 // https://docs.google.com/presentation/d/1MEs_JAyRC3J0YOX0bce1XBG42w5Q6rAvMvHb46yEbpo/edit?usp=sharing
 //
@@ -44,7 +53,7 @@ import com.google.maps.android.ui.IconGenerator;
 // My advice is to use an actual device or the official Android emulator:
 // http://guides.codepath.com/android/Google-Maps-Fragment-Guide#setup-x86-based-emulator
 //
-// But if using the Genymotion emulator, setup Google Play Services and GPS:
+// But if using the Genymotion emulator, set up Google Play Services and GPS:
 // http://guides.codepath.com/android/Genymotion-2.0-Emulators-with-Google-Play-support#setup-google-play-services
 //
 // SUMMARY OF TODOs:
