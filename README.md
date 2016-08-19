@@ -43,10 +43,12 @@
 * A3 Get Google Maps API key (AndroidManifest)
 * A4 Check out the project's library dependencies (app/build.gradle)
 * A5 Read what onCreate does (MapsActivity)  
+&nbsp;
 
 * B1 Build GoogleApiClient (MapsActivity)
 * B2 Get the map asynchronously (MapsActivity)
 * B3 Register callbacks on the GoogleApiClient (MapsActivity)  
+&nbsp;
 
 * C1 Enable location layer (action.AddLocationLayer)
 * C2 Move map to current location (action.MoveToLocationFirstTime)
