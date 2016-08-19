@@ -38,11 +38,15 @@
 ## Summary of TODOs
  I suggest you compile and run the project after completing each section.
 
-A1 Read instructions (MapsActivity)&nbsp;&nbsp;
-A2 Prepare Android Studio (MapsActivity)&nbsp;&nbsp;
-A3 Get Google Maps API key (AndroidManifest)&nbsp;&nbsp;
-A4 Check out the project's library dependencies (app/build.gradle)&nbsp;&nbsp;
-A5 Read what onCreate does (MapsActivity)&nbsp;&nbsp;
+A1 Read instructions (MapsActivity)
+
+A2 Prepare Android Studio (MapsActivity)
+
+A3 Get Google Maps API key (AndroidManifest)
+
+A4 Check out the project's library dependencies (app/build.gradle)
+
+A5 Read what onCreate does (MapsActivity)
 &nbsp;
 
 B1 Build GoogleApiClient (MapsActivity)&nbsp;&nbsp;
