@@ -36,6 +36,8 @@ import com.google.maps.android.ui.IconGenerator;
 // Setup troubleshooting: http://guides.codepath.com/android/Google-Maps-Fragment-Guide#troubleshooting
 // Completed lab: https://github.com/boes-matt/android-google-maps-demo/tree/completed
 // Maps guide: http://guides.codepath.com/android/Google-Maps-API-v2-Usage
+// Google Play Services code reference: https://developers.google.com/android/reference/packages
+// Android code reference: https://developer.android.com/reference/packages.html
 //
 // RUNNING THE APP:
 // My advice is to use an actual device or the official Android emulator:
@@ -54,9 +56,9 @@ import com.google.maps.android.ui.IconGenerator;
 //
 // B1 Build GoogleApiClient (MapsActivity)
 // B2 Get the map asynchronously (MapsActivity)
-// B3 Add callbacks to the GoogleApiClient (MapsActivity)
+// B3 Register callbacks on the GoogleApiClient (MapsActivity)
 //
-// C1 Add location layer (AddLocationLayer)
+// C1 Enable location layer (AddLocationLayer)
 // C2 Move map to current location (MoveToLocationFirstTime)
 // C3 Build CameraPosition (MoveToLocationFirstTime)
 //
@@ -137,22 +139,35 @@ public class MapsActivity extends AppCompatActivity {
     }
 
     // TODO D3 Build IconGenerator
-    // Set IconGenerator attributes.
-    // Use the MarkerFont text appearance style.
-    // Use it to build custom markers.
+    // IconGenerator is for your custom markers.
+    // It is part of the Maps utility library.
+    // Set a style and a text appearance on the IconGenerator.
+    // Use R.style.MarkerFont for the text appearance.
+    // Check it out in res/values/styles.xml
     private IconGenerator getIconGenerator() {
         return new IconGenerator(this);
     }
 
     // TODO E1 Build LocationRequest
-    // Set priority, interval, and fastest interval.
-    // Use it to start location updates.
+    // This LocationRequest is used in TrackLocation
+    // to start location updates.
+    // Set a priority, interval, and fastest interval.
+    // Look up what these settings mean in the Google Play
+    // Services code reference (See A1 under HELPFUL LINKS).
     private LocationRequest getLocationRequest() {
         return new LocationRequest();
     }
 
     // TODO B1 Build GoogleApiClient
-    // Enable auto manage and add LocationServices API
+    // Use the GoogleApiClient.Builder to enable auto manage
+    // and add the LocationServices API.
+    // See the official GoogleApiClient guide:
+    // https://developers.google.com/android/guides/api-client
+    // Auto manage connects to, handles errors, and disconnects from
+    // Google Play Services, well, automatically.
+    // The required OnConnectionFailedListener is only notified
+    // for unrecoverable errors.  You can pass null here if you
+    // want to do nothing in that situation.
     private GoogleApiClient getGoogleApiClient() {
         return new GoogleApiClient.Builder(this).build();
     }
@@ -162,7 +177,7 @@ public class MapsActivity extends AppCompatActivity {
 
     }
 
-    // TODO B3 Add callbacks to the GoogleApiClient
+    // TODO B3 Register callbacks on the GoogleApiClient
     private void addConnectionCallbacks(GoogleApiClient client, GoogleApiClient.ConnectionCallbacks callbacks) {
 
     }
