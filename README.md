@@ -43,7 +43,7 @@
 * A3 Get Google Maps API key (AndroidManifest)
 * A4 Check out the project's library dependencies (app/build.gradle)
 * A5 Read what onCreate does (MapsActivity)
-
+&nbsp;&nbsp;
 
 * B1 Build GoogleApiClient (MapsActivity)&nbsp;
 * B2 Get the map asynchronously (MapsActivity)&nbsp;
