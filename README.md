@@ -38,39 +38,39 @@
 ## Summary of TODOs
  I suggest you compile and run the project after completing each section.
 
-A1 Read instructions (MapsActivity)
-A2 Prepare Android Studio (MapsActivity)
-A3 Get Google Maps API key (AndroidManifest)
-A4 Check out the project's library dependencies (app/build.gradle)
-A5 Read what onCreate does (MapsActivity)
-&nbsp;&nbsp;
+A1 Read instructions (MapsActivity)&nbsp;
+A2 Prepare Android Studio (MapsActivity)&nbsp;
+A3 Get Google Maps API key (AndroidManifest)&nbsp;
+A4 Check out the project's library dependencies (app/build.gradle)&nbsp;
+A5 Read what onCreate does (MapsActivity)&nbsp;
+&nbsp;
 
-B1 Build GoogleApiClient (MapsActivity)
-B2 Get the map asynchronously (MapsActivity)
-B3 Register callbacks on the GoogleApiClient (MapsActivity)
-&nbsp;&nbsp;
+B1 Build GoogleApiClient (MapsActivity)&nbsp;
+B2 Get the map asynchronously (MapsActivity)&nbsp;
+B3 Register callbacks on the GoogleApiClient (MapsActivity)&nbsp;
+&nbsp;
 
-C1 Enable location layer (action.AddLocationLayer)
-C2 Move map to current location (action.MoveToLocationFirstTime)
-C3 Build CameraPosition (action.MoveToLocationFirstTime)
-&nbsp;&nbsp;
+C1 Enable location layer (action.AddLocationLayer)&nbsp;
+C2 Move map to current location (action.MoveToLocationFirstTime)&nbsp;
+C3 Build CameraPosition (action.MoveToLocationFirstTime)&nbsp;
+&nbsp;
 
-D1 Set long click listener (action.AddMarkerOnLongClick)
-D2 Show dialog (action.AddMarkerOnLongClick)
-D3 Build IconGenerator (MapsActivity)
-D4 Add marker (action.AddToMap)
-D5 Animate marker (action.AddToMap)
-&nbsp;&nbsp;
+D1 Set long click listener (action.AddMarkerOnLongClick)&nbsp;
+D2 Show dialog (action.AddMarkerOnLongClick)&nbsp;
+D3 Build IconGenerator (MapsActivity)&nbsp;
+D4 Add marker (action.AddToMap)&nbsp;
+D5 Animate marker (action.AddToMap)&nbsp;
+&nbsp;
 
-E1 Build LocationRequest (MapsActivity)
-E2 Request location updates (action.TrackLocation)
-E3 Remove location updates (action.TrackLocation)
-E4 Log location updates (action.LogLocation)
-&nbsp;&nbsp;
+E1 Build LocationRequest (MapsActivity)&nbsp;
+E2 Request location updates (action.TrackLocation)&nbsp;
+E3 Remove location updates (action.TrackLocation)&nbsp;
+E4 Log location updates (action.LogLocation)&nbsp;
+&nbsp;
 
-F1 Test user stories (MapsActivity)
-&nbsp;&nbsp;
+F1 Test user stories (MapsActivity)&nbsp;
+&nbsp;
 
-G1 Understand how OnActivity works (helper.OnActivity)
-G2 Understand how OnPermission works (helper.OnPermission)
-G3 Understand how PlaceManager works (helper.PlaceManager)
+G1 Understand how OnActivity works (helper.OnActivity)&nbsp;
+G2 Understand how OnPermission works (helper.OnPermission)&nbsp;
+G3 Understand how PlaceManager works (helper.PlaceManager)&nbsp;
