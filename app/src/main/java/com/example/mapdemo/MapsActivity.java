@@ -53,6 +53,7 @@ import com.google.maps.android.ui.IconGenerator;
 // A2 Prepare Android Studio (MapsActivity)
 // A3 Get Google Maps API key (AndroidManifest)
 // A4 Check out the project's library dependencies (app/build.gradle)
+// A5 Read what onCreate does (MapsActivity)
 //
 // B1 Build GoogleApiClient (MapsActivity)
 // B2 Get the map asynchronously (MapsActivity)
@@ -103,6 +104,33 @@ public class MapsActivity extends AppCompatActivity {
 
     public static final String TAG = MapsActivity.class.getSimpleName();
 
+    // TODO A5 Read what onCreate does
+    // onCreate "wires" the app together.
+    //
+    // The "listenables" OnActivity, OnClient, OnMap, OnPermission, and TrackLocation
+    // take a list of listeners that are interested in receiving updates.
+    //
+    // AddLocationLayer, MoveToLocationFirstTime, AddMarkerOnLongClick, PlaceManager,
+    // TrackLocation, and LogLocation are listeners to one or more of the
+    // listenables above.  Each listener will receive updates, set and check
+    // its internal state, and potentially take an action.  For example:
+    //
+    // AddLocationLayer listens for the map and the location permission
+    // before it enables the map's location layer.
+    //
+    // MoveToLocationFirstTime listens for the map, the connected GoogleApiClient, and the
+    // location permission before it moves the map to the user's current location.
+    //
+    // AddMarkerOnLongClick listens for the map before it sets an on long click listener.
+    //
+    // PlaceManager listens for the activity's saved instance state, to save and restore
+    // any places on rotation, and the map, which it uses to call AddToMap's addTo method.
+    // AddToMap's addTo method then adds a marker to the map and optionally animates the marker.
+    //
+    // TrackLocation listens for a resumed or paused activity, the connected GoogleApiClient,
+    // the map, and the location permission before it starts and stops location updates.
+    //
+    // LogLocation listens for a location from TrackLocation before it logs the location.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
