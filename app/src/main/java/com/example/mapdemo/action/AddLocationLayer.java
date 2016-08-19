@@ -12,6 +12,8 @@ public class AddLocationLayer implements
     private OnPermission.Result mPermissionResult;
 
     // TODO C1 Add location layer
+    // If you see an error, try changing the annotation to @SuppressWarnings("All").
+    // We have already checked that the location permission is granted.
     @SuppressWarnings("MissingPermission")
     private void addLayer(GoogleMap map) {
 

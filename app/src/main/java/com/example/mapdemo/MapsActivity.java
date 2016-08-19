@@ -29,34 +29,34 @@ import com.google.maps.android.ui.IconGenerator;
 // https://docs.google.com/presentation/d/1MEs_JAyRC3J0YOX0bce1XBG42w5Q6rAvMvHb46yEbpo/edit?usp=sharing
 //
 // Summary of TODOs:
-// A1 Read instructions
-// A2 Prepare Android Studio
-// A3 Get Google Maps API key
+// A1 Read instructions (MapsActivity)
+// A2 Prepare Android Studio (MapsActivity)
+// A3 Get Google Maps API key (AndroidManifest)
 //
-// B1 Build GoogleApiClient
-// B2 Get the map asynchronously
-// B3 Add callbacks to the GoogleApiClient
+// B1 Build GoogleApiClient (MapsActivity)
+// B2 Get the map asynchronously (MapsActivity)
+// B3 Add callbacks to the GoogleApiClient (MapsActivity)
 //
-// C1 Add location layer
-// C2 Move map to current location
-// C3 Build CameraPosition
+// C1 Add location layer (AddLocationLayer)
+// C2 Move map to current location (MoveToLocationFirstTime)
+// C3 Build CameraPosition (MoveToLocationFirstTime)
 //
-// D1 Set long click listener
-// D2 Show dialog
-// D3 Build IconGenerator
-// D4 Add marker
-// D5 Animate marker
+// D1 Set long click listener (AddMarkerOnLongClick)
+// D2 Show dialog (AddMarkerOnLongClick)
+// D3 Build IconGenerator (MapsActivity)
+// D4 Add marker (AddToMap)
+// D5 Animate marker (AddToMap)
 //
-// E1 Build LocationRequest
-// E2 Request location updates
-// E3 Remove location updates
-// E4 Log location updates
+// E1 Build LocationRequest (MapsActivity)
+// E2 Request location updates (TrackLocation)
+// E3 Remove location updates (TrackLocation)
+// E4 Log location updates (LogLocation)
 //
-// F1 Test user stories
+// F1 Test user stories (MapsActivity)
 //
-// G1 Understand how OnActivity works
-// G2 Understand how OnPermission works
-// G3 Understand how PlaceManager works
+// G1 Understand how OnActivity works (OnActivity)
+// G2 Understand how OnPermission works (OnPermission)
+// G3 Understand how PlaceManager works (PlaceManager)
 
 
 // TODO A2 Prepare Android Studio

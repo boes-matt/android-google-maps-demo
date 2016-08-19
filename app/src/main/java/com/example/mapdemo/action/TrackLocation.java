@@ -42,6 +42,9 @@ public class TrackLocation implements
     // Pass mClient, mLocationRequest, and this TrackLocation.
     // TrackLocation implements LocationListener.
     // Look at preconditions in check method.
+    //
+    // If you see an error, try changing the annotation to @SuppressWarnings("All").
+    // We have already checked that the location permission is granted.
     @SuppressWarnings("MissingPermission")
     private void startLocationUpdates() {
         Log.d(MapsActivity.TAG, "Requested location updates");

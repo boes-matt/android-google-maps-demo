@@ -31,6 +31,9 @@ public class MoveToLocationFirstTime implements
     // Get last location.
     // Move map with camera.
     // Use getCameraPosition helper method.
+    //
+    // If you see an error, try changing the annotation to @SuppressWarnings("All").
+    // We have already checked that the location permission is granted.
     @SuppressWarnings("MissingPermission")
     private void moveToUserLocation(GoogleApiClient client, GoogleMap map) {
 
