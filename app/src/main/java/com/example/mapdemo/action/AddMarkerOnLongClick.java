@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.widget.EditText;
 
+import com.example.mapdemo.R;
 import com.example.mapdemo.helper.OnMap;
 import com.example.mapdemo.helper.PlaceManager;
 import com.google.android.gms.maps.GoogleMap;
@@ -48,7 +49,7 @@ public class AddMarkerOnLongClick implements OnMap.Listener {
         dialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                final EditText titleField = (EditText) dialog.findViewById(R.id.title);
+                EditText titleField = (EditText) dialog.findViewById(R.id.title);
                 String title = titleField != null ?
                         titleField.getText().toString() :
                         "Wow!";
