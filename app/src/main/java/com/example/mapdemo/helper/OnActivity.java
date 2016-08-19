@@ -1,4 +1,4 @@
-package com.example.mapdemo;
+package com.example.mapdemo.helper;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,7 +7,9 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
 
-// TODO Understand how OnActivity works
+import com.example.mapdemo.MapsActivity;
+
+// TODO G1 Understand how OnActivity works
 // OnActivity is a headless fragment.
 public class OnActivity extends Fragment {
 

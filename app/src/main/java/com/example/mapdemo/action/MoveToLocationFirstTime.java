@@ -1,8 +1,11 @@
-package com.example.mapdemo;
+package com.example.mapdemo.action;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.example.mapdemo.helper.OnClient;
+import com.example.mapdemo.helper.OnMap;
+import com.example.mapdemo.helper.OnPermission;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.CameraPosition;
@@ -23,7 +26,7 @@ public class MoveToLocationFirstTime implements
         mSavedInstanceState = savedInstanceState;
     }
 
-    // TODO Move map to current location
+    // TODO C2 Move map to current location
     // Use LocationServices' FusedLocationApi.
     // Get last location.
     // Move map with camera.
@@ -33,7 +36,7 @@ public class MoveToLocationFirstTime implements
 
     }
 
-    // TODO Build CameraPosition
+    // TODO C3 Build CameraPosition
     // Use CameraPosition.Builder.
     // Set target, zoom, and tilt (for 3d effect).
     private CameraPosition getCameraPosition(LatLng latLng) {

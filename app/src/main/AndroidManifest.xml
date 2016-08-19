@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme">
 
         <!--
-             TODO Get Google Maps API key
+             TODO A3 Get Google Maps API key
              Create a string resource 'secret_maps_api_key' with the Google Maps API debug
              key in strings.xml, or better yet, in a new file src/debug/res/values/keys.xml
              which git will ignore (see .gitignore in top-level directory).  You do NOT

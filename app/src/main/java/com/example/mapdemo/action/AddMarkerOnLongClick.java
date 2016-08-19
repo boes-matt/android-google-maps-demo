@@ -1,7 +1,9 @@
-package com.example.mapdemo;
+package com.example.mapdemo.action;
 
 import android.content.Context;
 
+import com.example.mapdemo.helper.OnMap;
+import com.example.mapdemo.helper.PlaceManager;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 
@@ -15,14 +17,14 @@ public class AddMarkerOnLongClick implements OnMap.Listener {
         mPlaceManager = manager;
     }
 
-    // TODO Set long click listener
+    // TODO D1 Set long click listener
     // Call showAlertDialog method.
     @Override
     public void onMap(final GoogleMap map) {
 
     }
 
-    // TODO Show dialog
+    // TODO D2 Show dialog
     // Use AlertDialog.Builder and marker_dialog layout.
     // Set a positive button and a negative button.
     // Positive button should get the title field and add a place to the PlaceManager.

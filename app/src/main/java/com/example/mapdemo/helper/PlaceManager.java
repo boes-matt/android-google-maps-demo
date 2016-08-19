@@ -1,15 +1,16 @@
-package com.example.mapdemo;
+package com.example.mapdemo.helper;
 
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.example.mapdemo.action.AddToMap;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 
-// TODO Understand how PlaceManager works
+// TODO G3 Understand how PlaceManager works
 // PlaceManager saves marker state on device rotation.
 public class PlaceManager implements
         OnActivity.Listener,

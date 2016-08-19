@@ -1,4 +1,4 @@
-package com.example.mapdemo;
+package com.example.mapdemo.helper;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -10,11 +10,13 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.util.ArrayMap;
 import android.util.Log;
 
+import com.example.mapdemo.MapsActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-// TODO Understand how OnPermission works
+// TODO G2 Understand how OnPermission works
 // OnPermission is a headless fragment.
 public class OnPermission extends Fragment {
 
