@@ -45,20 +45,20 @@
 * A5 Read what onCreate does (MapsActivity)<br />  
 * B1 Build GoogleApiClient (MapsActivity)
 * B2 Get the map asynchronously (MapsActivity)
-* B3 Register callbacks on the GoogleApiClient (MapsActivity)<br />
+* B3 Register callbacks on the GoogleApiClient (MapsActivity)<br />  
 * C1 Enable location layer (action.AddLocationLayer)
 * C2 Move map to current location (action.MoveToLocationFirstTime)
-* C3 Build CameraPosition (action.MoveToLocationFirstTime)
+* C3 Build CameraPosition (action.MoveToLocationFirstTime)<br />  
 * D1 Set long click listener (action.AddMarkerOnLongClick)
 * D2 Show dialog (action.AddMarkerOnLongClick)
 * D3 Build IconGenerator (MapsActivity)
 * D4 Add marker (action.AddToMap)
-* D5 Animate marker (action.AddToMap)
+* D5 Animate marker (action.AddToMap)<br />  
 * E1 Build LocationRequest (MapsActivity)
 * E2 Request location updates (action.TrackLocation)
 * E3 Remove location updates (action.TrackLocation)
-* E4 Log location updates (action.LogLocation)
-* F1 Test user stories (MapsActivity)
+* E4 Log location updates (action.LogLocation)<br />  
+* F1 Test user stories (MapsActivity)<br />  
 * G1 Understand how OnActivity works (helper.OnActivity)
 * G2 Understand how OnPermission works (helper.OnPermission)
 * G3 Understand how PlaceManager works (helper.PlaceManager)
